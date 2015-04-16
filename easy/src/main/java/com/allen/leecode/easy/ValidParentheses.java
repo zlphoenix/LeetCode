@@ -1,4 +1,4 @@
-package com.allen.leecode.easy.easy;
+package com.allen.leecode.easy;
 
 import java.util.Stack;
 

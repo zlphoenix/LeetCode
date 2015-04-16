@@ -1,6 +1,5 @@
 package com.allen.leecode.easy;
 
-import com.allen.leecode.easy.easy.ValidParentheses;
 import junit.framework.Assert;
 import org.junit.Test;
 
