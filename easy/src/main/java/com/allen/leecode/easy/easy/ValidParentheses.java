@@ -7,7 +7,7 @@ import java.util.Stack;
  * <p>Copyright (c) 2015, Inspur GSP All Rights Reserved.</p>
  * <p>修改记录1: 新建文件-15/4/16上午12:49-zhoulun</p>
  */
-public class ValidParentheses_20 {
+public class ValidParentheses {
     private boolean isMatch(char pre, char post) {
         return pre == '(' && post == ')' ||
                 pre == '[' && post == ']' ||

@@ -1,8 +1,7 @@
 package com.allen.leecode.easy;
 
-import com.allen.leecode.easy.easy.ValidParentheses_20;
+import com.allen.leecode.easy.easy.ValidParentheses;
 import junit.framework.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 
@@ -12,7 +11,7 @@ import org.junit.Test;
  * <p>修改记录1: 新建文件-15/4/16上午12:56-zhoulun</p>
  */
 public class ValidParentheses_Test {
-    ValidParentheses_20 v = new ValidParentheses_20();
+    ValidParentheses v = new ValidParentheses();
 
 
     @Test
