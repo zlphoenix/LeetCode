@@ -15,6 +15,7 @@ import java.util.Map;
 public class Easy_Test {
 
 
+
     //region Helper
     protected void AreEqual(Object actual, Object expected, String msg) {
         boolean equal = isEqual(actual, expected, msg);
@@ -33,6 +34,7 @@ public class Easy_Test {
                 (actual == null ? "null" : actual.toString()), !equal);
 
     }
+    //endregion
 
     private boolean isEqual(Object actual, Object expected, String msg) {
         boolean equal = false;
@@ -45,7 +47,6 @@ public class Easy_Test {
             equal = actual.equals(expected);
         return equal;
     }
-    //endregion
 
     @Test
     public void testParentheses() {
@@ -119,24 +120,23 @@ public class Easy_Test {
         }
 
     }
+
     @Test
-    public void testReverseBits() {
-        Map<Integer, Integer> result = new HashMap<Integer, Integer>(8);
-        result.put(1, 1);
-        result.put(2, 1);
-        result.put(3, 2);
-        result.put(-1, 31);
-//        result.put(5, "111221");
-//        result.put(6, "312211");
-//        result.put(7, "13112221");
-//        result.put(8, "1113213211");
-
-        NumberOfOneBits actor = new NumberOfOneBits();
-        for (Integer integer : result.keySet()) {
-            int r = actor.hammingWeight(integer);
-            AreEqual(r, result.get(integer), integer.toString() + "," + r);
-        }
-
+    public void testSwap() {
+        System.out.println((int) ((4 - 1) / 2 ));
+        System.out.println((int) ((5 - 1) / 2));
     }
 
+    @Test
+    public void testTwoSum()
+    {
+        TwoSum actor = new TwoSum();
+        int[] array =actor.twoSum(new int []{2, 7, 11, 15},9);
+        Assert.assertTrue(array[1]==1);
+        Assert.assertTrue(array[2]==2);
+
+        array =actor.twoSum(new int []{-3,4,3,90}, 0);
+        Assert.assertTrue(array[1]==1);
+        Assert.assertTrue(array[2]==3);
+    }
 }
