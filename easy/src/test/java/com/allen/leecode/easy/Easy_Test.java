@@ -15,7 +15,6 @@ import java.util.Map;
 public class Easy_Test {
 
 
-
     //region Helper
     protected void AreEqual(Object actual, Object expected, String msg) {
         boolean equal = isEqual(actual, expected, msg);
@@ -123,20 +122,40 @@ public class Easy_Test {
 
     @Test
     public void testSwap() {
-        System.out.println((int) ((4 - 1) / 2 ));
+        System.out.println((int) ((4 - 1) / 2));
         System.out.println((int) ((5 - 1) / 2));
     }
 
     @Test
-    public void testTwoSum()
-    {
+    public void testTwoSum() {
         TwoSum actor = new TwoSum();
-        int[] array =actor.twoSum(new int []{2, 7, 11, 15},9);
-        Assert.assertTrue(array[1]==1);
-        Assert.assertTrue(array[2]==2);
+        int[] array = actor.twoSum(new int[]{2, 7, 11, 15}, 9);
+        Assert.assertTrue(array[1] == 1);
+        Assert.assertTrue(array[2] == 2);
 
-        array =actor.twoSum(new int []{-3,4,3,90}, 0);
-        Assert.assertTrue(array[1]==1);
-        Assert.assertTrue(array[2]==3);
+        array = actor.twoSum(new int[]{-3, 4, 3, 90}, 0);
+        Assert.assertTrue(array[1] == 1);
+        Assert.assertTrue(array[2] == 3);
+    }
+
+    @Test
+    public void testAddTwoNumbers() {
+
+        ListNode left = ListNode.build(new int[]{2, 4, 3});
+        ListNode right = ListNode.build(new int[]{5, 6, 4});
+        ListNode result = ListNode.build(new int[]{7, 0, 8});
+        AddTwoNumbers action = new AddTwoNumbers();
+        ListNode acutalResult = action.addTwoNumbers(left, right);
+
+        AreEqual(acutalResult,result,"not equal");
+
+
+        left = ListNode.build(new int[]{9});
+        right = ListNode.build(new int[]{9});
+        result = ListNode.build(new int[]{8,1});
+
+        acutalResult = action.addTwoNumbers(left, right);
+
+        AreEqual(acutalResult,result,"not equal");
     }
 }
